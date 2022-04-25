@@ -1,0 +1,29 @@
+// hexcode @ opalite forest 2022.01.05
+// viz with ST4RM41D
+
+s0.initScreen();
+a.setBins(8);
+a.setSmooth(0.7);
+
+osc(Math.PI * 4, 0.1, 2.5)
+  .scrollX(0.35, 0)
+  .scale(2)
+  .color(1, 1, 1)
+  .saturate(0.0)
+  .brightness(0.3)
+  .modulate(src(s0), 2)
+  .modulatePixelate(
+    noise(() => 3 - a.fft[0] * 3, a.fft[0]).pixelate(
+      16,
+      16
+    ),
+    1024,
+    16
+  )
+  .modulateScale(
+  	noise(1.5,0.18)
+      .modulateScale(
+        osc(13)
+        .rotate(()=>Math.sin(time/22))),
+  () => a.fft[0] * 0.2 + a.fft[1] * 0.5)
+  .out();

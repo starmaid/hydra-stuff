@@ -1,0 +1,39 @@
+// hexcode @ opalite forest 2022.01.05
+// viz with ST4RM41D
+
+s0.initCam();
+a.setBins(5);
+a.setSmooth(0);
+
+src(s0)
+  .brightness(0)
+  .contrast(1)
+  .saturate(1)
+  .out(o0);
+
+s1.initVideo(
+  "https://c.tenor.com/dd7nsu0ZbuoAAAPo/gir-invaderz-zm.mp4"
+);
+
+src(s1)
+  .invert()
+  .luma(0.1)
+  .invert()
+  .scale(0.5)
+  .modulateScrollX(osc(2, 2, 1), 0.3, 0.2)
+  .modulateScrollY(osc(1, 2), 0.2, 0.2)
+  .out(o1);
+
+osc(20, 1, 2)
+  .rotate(1, 1)
+  .mask(
+    src(o0)
+      .thresh(() => a.fft[0] * 0.1)
+      .invert()
+      .luma(0.1)
+  )
+  .out(o2);
+
+src(o0).layer(src(o2)).layer(src(o1)).out(o3);
+
+render(o3);

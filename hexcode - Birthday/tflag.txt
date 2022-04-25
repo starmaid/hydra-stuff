@@ -1,0 +1,23 @@
+// Happy birthday June!
+// Written by @starmaid 9-30-21
+
+s0.initCam();
+a.setBins(5);
+a.setSmooth(0);
+
+osc(Math.PI * 2, 0, 2.5)
+  .scrollX(0.35, 0)
+  .scale(2)
+  .color(1, 0, 1)
+  .saturate(0.8)
+  .brightness(0.3)
+  .modulate(src(s0), 2)
+  .modulatePixelate(
+    noise(() => 3 - a.fft[0] * 2.9, 0).pixelate(
+      16,
+      16
+    ),
+    1024,
+    16
+  )
+  .out();
