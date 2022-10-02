@@ -43,6 +43,7 @@ audio () => a.fft[0]
 s2.initVideo()
 s3.initImage()
 
+setResolution(innerWidth/2, innerHeight/2)
 ```
 
 
