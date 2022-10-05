@@ -55,6 +55,14 @@ setResolution(innerWidth/2, innerHeight/2)
 osc(Math.PI*2,0,Math.PI/2)  // get a single rainbow that stretches the screen
 ```
 
+## scale
+
+Make any shapes generated even (squares, triangles)
+
+```
+scale(1,9/16.1)
+```
+
 ## update
 
 this function runs once a frame (determined by `fps`).
