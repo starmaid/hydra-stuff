@@ -46,6 +46,75 @@ s3.initImage()
 setResolution(innerWidth/2, innerHeight/2)
 ```
 
+## All Functions
+
+SRC
+
+```
+// src
+src(source)
+osc(freq, sync, offset)
+noise(scale, offset)
+voronoi(scale, speed, blending)
+shape(sides, radius, smoothing)
+gradient(speed)
+solid(r, g, b, a)
+
+// geometry
+rotate(angle, speed)
+scale(size, xmult, ymult)
+pixelate(x, y)
+repeat(repeatX, repeatY, offsetX, offsetY)
+repeatX(reps, offset)
+repeatY(reps, offset)
+kaleid(nsides)
+scroll(scrollX, scrollY, speedX, speedY)
+scrollX(scrollX, speed)
+scrollY(scrollY, speed)
+
+// color
+brightness
+contrast
+color vec4
+colorama
+invert
+luma
+posterize
+saturate
+shift
+thresh
+
+// blend
+add
+sub
+layer
+blend
+mult
+diff
+mask
+
+// modulate
+modulateRepeat
+modulateRepeatX
+modulateRepeatY
+modulateKaleid
+modulateScrollX
+modulateScrollY
+modulate
+modulateScale
+modulatePixelate
+modulateRotate
+modulateHue
+
+// external
+initCam
+initImage
+initVideo
+init
+initStream
+initScreen
+```
+
 
 ## OSC
 
