@@ -23,4 +23,4 @@ https://hydra.ojack.xyz/?code=czAuaW5pdENhbSgpJTBBJTBBcGIuc2V0TmFtZSglMjJuaWNrUH
 pb.setName("nickProducts")
 
 s0.initStream("nickProducts")
-src(s0).out()
+src(s0).scale(1,14/16).out()
