@@ -46,6 +46,16 @@ s3.initImage()
 setResolution(innerWidth/2, innerHeight/2)
 ```
 
+### Basic Feedback
+
+```
+src(s0).out(o0)
+
+src(o1).scale(1.1).brightness(-0.05).layer(src(o0).luma(0.5)).out(o1)
+
+render(o1)
+```
+
 ## All Functions
 
 SRC
