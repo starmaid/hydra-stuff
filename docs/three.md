@@ -61,3 +61,7 @@ update = () => {
     box.rotation.x += 0.05
 }
 ```
+
+## Render stuff
+
+https://threejs.org/manual/#en/rendertargets
