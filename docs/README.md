@@ -152,6 +152,11 @@ update = () => {
 }
 ```
 
+## OnBeat
+
+there is some basic beat detection on hydra:
+https://github.com/hydra-synth/hydra-synth/blob/6b10dc1778c9d33f0665eeaf17a52141c4a17bf3/src/lib/audio.js#L19
+
 ## editor view
 
 ```
