@@ -2,7 +2,13 @@
 
 November 21, 2023 @ 7:00 am PST
 
-I want to bring in data from a depth camera and play with it in Three.js. This is my journey.
+## Who am I?
+
+I'm starmaid, and I got into Hydra during the [2020 subculture zoom parties](https://www.youtube.com/watch?v=Z-Lvs-4r7Ak). The video effects during these were always very basic, and I knew there was a better way. I love using it during live performances, online or in person.
+
+![](./gtr.gif)
+
+For this meetup, I want to bring in data from a depth camera and play with it in Three.js.
 
 ## Hardware
 
@@ -10,7 +16,18 @@ I had a few adventures getting the hardware set up. See my blog posts [here](htt
 
 ## Input
 
-Intel's windows drivers do expose the depth data, but it doesnt seem to be directly capturable like a normal webcam. Trying to select the camera in the firefox browser dialogue returns an 'unable to read device' error.
+Intel's Windows drivers do expose the depth data, but it doesnt seem to be directly capturable like a normal webcam. 
+
+![Alt text](./win_scr.png)
+
+Trying to select the camera in the firefox browser dialogue returns an error. Its not just hydra, even OBS and OpenCV were unable to.
+
+```
+06:52:25 ✨ choo editor:evalLine s1.initCam() 1ms bundle.min.js:20:159467
+DOMException: Failed to allocate videosource
+could not get camera TypeError: response is undefined       
+    initCam https://unpkg.com/hydra-synth:2711
+```
 
 Because of this, I started looking at other ways to read the camera. One would be to read with the librealsense driver in python and then stream in a way that we can read it in JS. I can also render to screen. Check out this diagram.
 
