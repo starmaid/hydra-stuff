@@ -1,0 +1,26 @@
+#hydra-bg {
+    position: fixed; /* ignore margins */
+    top: 0px;
+    left: 0px;
+    width: 100%; /* fill screen */
+    height: 100%;
+    background-size: cover;
+    overflow-y: hidden;
+    z-index: -1; /* place behind everything else */
+    display: block;
+}
+
+h1 {
+    color: white;
+    font-family: monospace,courier;
+}
+
+p {
+    color: white;
+    font-family: monospace,courier;
+}
+
+.content {
+    background-color: rgba(0,0,0,0.3);
+    margin: 6%;
+}
