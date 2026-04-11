@@ -1,6 +1,8 @@
 // hexcode @ opalite forest 2022.01.05
 // viz with ST4RM41D
 
+// silver patterns like the AG cook Seven album cover
+
 s0.initScreen();
 a.setBins(8);
 a.setSmooth(0.7);

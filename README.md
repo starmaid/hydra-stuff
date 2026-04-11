@@ -1,6 +1,10 @@
 # Place to store my hydra sketches
 
-Run hydra locally
+[Hydra](https://hydra.ojack.xyz/) is a video syntheizer tool that can run in a web browser.
+
+This repo holds some fun things I've worked on.
+
+Run hydra locally 
 
 ```
 yarn serve
@@ -9,6 +13,8 @@ start firefox https://localhost:8000/?sketch_id=ritchse_1
 
 start firefox https://localhost:8000/?code=b3NjKCkub3V0KCklMEE%3D
 ```
+
+
 
 ![](./random/media/1.gif)
 

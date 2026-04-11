@@ -1,6 +1,8 @@
 // hexcode @ opalite forest 2022.01.05
 // viz with ST4RM41D
 
+// horizontal lines in a equalizer pattern
+
 a.setBins(5)
 a.setScale(1)
 a.setSmooth(0)

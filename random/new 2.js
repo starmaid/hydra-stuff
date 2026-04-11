@@ -5,3 +5,5 @@ src(o2).scale(1.02).colorama().brightness(-0.05).scroll(() => time/5 % 0.5, () =
 s1.initImage('http://localhost:2345/tree_mask.png')
 
 src(o2).mask(src(s1)).out()
+
+render(o0)

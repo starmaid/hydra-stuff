@@ -1,5 +1,5 @@
 
-s0.initCam()
+s0.initScreen()
 
 a.setScale(1)
 a.setBins(5)
@@ -10,3 +10,5 @@ src(s0)
     noise(() => 3 - a.fft[0] * 1, 0)
     .pixelate(42,42),2000,32)
   .out()
+
+render(o0)

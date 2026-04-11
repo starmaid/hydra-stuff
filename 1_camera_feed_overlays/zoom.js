@@ -1,6 +1,8 @@
 // hexcode @ opalite forest 2022.01.05
 // viz with ST4RM41D
 
+// sunrise-colored feedback
+
 s0.initScreen()
 
 src(s0)

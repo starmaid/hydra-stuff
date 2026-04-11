@@ -1,6 +1,9 @@
 // hexcode @ opalite forest 2022.01.05
 // viz with ST4RM41D
 
+// starts with a rectangle in the center of the screen
+// eminates outwards with purple modulated feedback
+
 a.setBins(5)
 a.setScale(1)
 a.setSmooth(0)
