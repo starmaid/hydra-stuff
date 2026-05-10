@@ -152,6 +152,34 @@ update = () => {
 }
 ```
 
+## gif capture
+
+```
+let loopcounter = 0;
+update = () => {
+  if (loopcounter < 30) {
+    console.log("frame " + loopcounter);
+    screencap()
+    loopcounter = loopcounter + 1;
+  }
+}
+```
+
+```
+find *.png -type f -exec \
+sh -c '
+for i do
+    d=$(dirname "$i")
+    [ "$d" = / ] && d=
+    n=${i##*/}
+    mv "$i" "$d/$(stat -c %.3W "$i").png"
+done' _ {} +
+```
+
+```
+ffmpeg -framerate 30 -pattern_type glob -i '*.png' -vf "fps=30,scale=iw/4:ih/4,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 out.gif
+```
+
 ## OnBeat
 
 there is some basic beat detection on hydra:
